@@ -1,1 +1,1 @@
-# Teme_info_X-C
+# Teme_informatica_X-C
