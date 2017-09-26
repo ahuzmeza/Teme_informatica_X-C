@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+
+    int v[100], n;
+
+int dif(int a, int b);
+void afisare();
+int valid(int k);
+void backtrack(int k);
+
+int main()
+{
+        cin>>n;
+    backtrack(1);
+}
+
+int dif(int a, int b)
+{
+    if (a >= b)
+        return a - b;
+    else
+        return b - a;
+}
+
+void afisare()
+{
+    for(int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+            if (v[j] == i)
+                cout<<"N ";
+            else
+                cout<<"- ";
+        cout<< endl;
+    }
+    cout<< endl;
+}
+
+int valid(int k)
+{
+    for(int i = 1; i <= k-1; i++)
+        if (k - i == dif(v[k] , v[i]))
+         return 0;
+return 1;
+}
+
+void backtrack(int k)
+{
+    for(int i = 1; i <= n; i++)
+    {
+        v[k] = i;
+        if (valid(k))
+            if (k == n)
+                afisare();
+            else
+                backtrack(k+1);
+    }
+}
+
+
+
+
+
