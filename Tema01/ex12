@@ -1,3 +1,5 @@
+// Sah n regine n*n tabla x-col x-li
+
 #include<iostream>
 using namespace std;
 
