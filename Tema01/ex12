@@ -1,4 +1,5 @@
-// Sah n regine n*n tabla x-col x-li
+
+// Sah n regine n*n tabla x-col x-li x-diag
 
 #include<iostream>
 using namespace std;
